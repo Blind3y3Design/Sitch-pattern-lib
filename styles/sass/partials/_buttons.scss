@@ -1,0 +1,111 @@
+button, a.btn, a.btn:visited, a.button, a.button:visited, input[type="submit"], input[type="reset"], input[type="button"] {
+	position: relative;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0.5em 1em;
+	line-height: 1em;
+	box-sizing: border-box;
+	cursor: pointer;
+	width: auto;
+	font-weight: normal;
+	font-size: 1em;
+	// color: $black;
+	text-decoration: none;
+	display: inline-block;
+	transition: all 0.25s ease;
+	
+	@include button-color($grey);
+
+	// Color Variants
+	// To create a new color define the color variable in the _variables.scss partial and follow the style below
+	&.blue {
+		@include button-color($blue);
+		
+		&.gradient {
+			@include gradient($blue);
+		}
+	}
+	&.orange {
+		@include button-color($orange);
+		
+		&.gradient {
+			@include gradient($orange);
+		}
+	}
+	&.green {
+		@include button-color($green);
+		
+		&.gradient {
+			@include gradient($green);
+		}
+	}
+	&.red {
+		@include button-color($red);
+		
+		&.gradient {
+			@include gradient($red);
+		}
+	}
+
+	// Size and Style Variants
+	&.small {
+		font-size: 0.8em;
+	}
+	&.large {
+		font-size: 1.3em;
+	}
+
+	&.rounded {
+		border-radius: 0.5em;
+	}
+	&.pill {
+		border-radius: 2em;
+	}
+	&.shadow {
+		box-shadow: 0px 1px 5px rgba(0,0,0,0.2);
+	}
+	&.borderless {
+		@include button-color($grey, $borderless: true);
+	}
+	&.disabled {
+		@include button-disabled($grey);
+	}
+}
+button:hover, a.btn:hover, a.button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+	@include button-color-hover($grey);
+
+	// Color Variants
+	// To create a new color define the color variable in the _variables.scss partial and follow the style below
+	&.blue {
+		@include button-color-hover($blue);
+		&.gradient {
+			@include gradient-hover($blue);
+		}
+	}
+	&.orange {
+		@include button-color-hover($orange);
+		&.gradient {
+			@include gradient-hover($orange);
+		}
+	}
+	&.green {
+		@include button-color-hover($green);
+		&.gradient {
+			@include gradient-hover($green);
+		}
+	}
+	&.red {
+		@include button-color-hover($red);
+		&.gradient {
+			@include gradient-hover($red);
+		}
+	}
+	
+	// Style Variants
+	&.borderless {
+		@include button-color-hover($grey, $borderless: true);
+	}
+	&.disabled {
+		@include button-disabled-hover($grey);
+	}
+}
