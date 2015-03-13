@@ -1,5 +1,4 @@
-@mixin button-color ($color, $font-color: $black, $borderless: false) {
-	color: $font-color;
+@mixin button-color ($color, $borderless: false) {
 	background: $color;
 	border: 1px solid darken( $color, 10% );
 	@if $borderless {border: none;} 

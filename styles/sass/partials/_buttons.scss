@@ -1,4 +1,4 @@
-button, a.btn, a.btn:visited, a.button, a.button:visited, input[type="submit"], input[type="reset"], input[type="button"] {
+button, .btn, .btn:visited, .button, .button:visited, input[type="submit"], input[type="reset"], input[type="button"] {
 	position: relative;
 	vertical-align: middle;
 	margin: 0;
@@ -9,7 +9,6 @@ button, a.btn, a.btn:visited, a.button, a.button:visited, input[type="submit"], 
 	width: auto;
 	font-weight: normal;
 	font-size: 1em;
-	// color: $black;
 	text-decoration: none;
 	display: inline-block;
 	transition: all 0.25s ease;
@@ -24,12 +23,28 @@ button, a.btn, a.btn:visited, a.button, a.button:visited, input[type="submit"], 
 		&.gradient {
 			@include gradient($blue);
 		}
+		&.borderless {
+			@include button-color($blue, $borderless: true);
+		}
+	}
+	&.purple {
+		@include button-color($purple);
+		
+		&.gradient {
+			@include gradient($purple);
+		}
+		&.borderless {
+			@include button-color($purple, $borderless: true);
+		}
 	}
 	&.orange {
 		@include button-color($orange);
 		
 		&.gradient {
 			@include gradient($orange);
+		}
+		&.borderless {
+			@include button-color($orange, $borderless: true);
 		}
 	}
 	&.green {
@@ -38,12 +53,18 @@ button, a.btn, a.btn:visited, a.button, a.button:visited, input[type="submit"], 
 		&.gradient {
 			@include gradient($green);
 		}
+		&.borderless {
+			@include button-color($green, $borderless: true);
+		}
 	}
 	&.red {
 		@include button-color($red);
 		
 		&.gradient {
 			@include gradient($red);
+		}
+		&.borderless {
+			@include button-color($red, $borderless: true);
 		}
 	}
 
@@ -71,7 +92,7 @@ button, a.btn, a.btn:visited, a.button, a.button:visited, input[type="submit"], 
 		@include button-disabled($grey);
 	}
 }
-button:hover, a.btn:hover, a.button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+button:hover, .btn:hover, .button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
 	@include button-color-hover($grey);
 
 	// Color Variants
@@ -81,11 +102,26 @@ button:hover, a.btn:hover, a.button:hover, input[type="submit"]:hover, input[typ
 		&.gradient {
 			@include gradient-hover($blue);
 		}
+		&.borderless {
+			@include button-color-hover($blue, $borderless: true);
+		}
+	}
+	&.purple {
+		@include button-color-hover($purple);
+		&.gradient {
+			@include gradient-hover($purple);
+		}
+		&.borderless {
+			@include button-color-hover($purple, $borderless: true);
+		}
 	}
 	&.orange {
 		@include button-color-hover($orange);
 		&.gradient {
 			@include gradient-hover($orange);
+		}
+		&.borderless {
+			@include button-color-hover($orange, $borderless: true);
 		}
 	}
 	&.green {
@@ -93,11 +129,17 @@ button:hover, a.btn:hover, a.button:hover, input[type="submit"]:hover, input[typ
 		&.gradient {
 			@include gradient-hover($green);
 		}
+		&.borderless {
+			@include button-color-hover($green, $borderless: true);
+		}
 	}
 	&.red {
 		@include button-color-hover($red);
 		&.gradient {
 			@include gradient-hover($red);
+		}
+		&.borderless {
+			@include button-color-hover($red, $borderless: true);
 		}
 	}
 	
