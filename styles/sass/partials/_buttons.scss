@@ -36,16 +36,6 @@ button, .btn, .btn:visited, .button, .button:visited, input[type="submit"], inpu
 			@include button-color($purple, $borderless: true);
 		}
 	}
-	&.light-purple {
-		@include button-color($light-purple);
-		
-		&.gradient {
-			@include gradient($light-purple);
-		}
-		&.borderless {
-			@include button-color($light-purple, $borderless: true);
-		}
-	}
 	&.orange {
 		@include button-color($orange);
 		
@@ -122,15 +112,6 @@ button:hover, .btn:hover, .button:hover, input[type="submit"]:hover, input[type=
 		}
 		&.borderless {
 			@include button-color-hover($purple, $borderless: true);
-		}
-	}
-	&.light-purple {
-		@include button-color-hover($light-purple);
-		&.gradient {
-			@include gradient-hover($light-purple);
-		}
-		&.borderless {
-			@include button-color-hover($light-purple, $borderless: true);
 		}
 	}
 	&.orange {

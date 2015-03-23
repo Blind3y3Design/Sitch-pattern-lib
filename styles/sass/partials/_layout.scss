@@ -4,9 +4,13 @@
 	box-sizing: border-box;
 }
 body {
+<<<<<<< HEAD
 	line-height: 1.4;
 	font-size:16px;
 	font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+section {
+	@include clearfix;
 }
 h1, .h1 {
 	font-size: 3em;
@@ -19,4 +23,3 @@ h3, .h3 {
 }
 p {
 	font-family: "Oswald","Helvetica Neue",Helvetica,Arial,sans-serif;
-}
